@@ -10,8 +10,8 @@
         </li>
      </ul>
      <form class="form-inline my-2 my-lg-0">
-        <input type="search"  id="searchName" class="form-control mr-sm-2" placeholder="Search students..." required>
-     </form>
+      <input type="search" (ngModelChange)="searchStudents(key.value)" #key="ngModel" ngModel
+      name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search students..." required>     </form>
   </div>
 </nav>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -67,8 +67,8 @@
              <input type="email" ngModel name="email" class="form-control" id="email" placeholder="Email" required>
           </div>
           <div class="form-group">
-             <label for="phone">Job title</label>
-             <input type="text" ngModel name="className" class="form-control" id="className" placeholder="Job title" required>
+             <label for="phone">Class name</label>
+             <input type="text" ngModel name="className" class="form-control" id="className" placeholder="Class name" required>
           </div>
           <div class="form-group">
              <label for="phone">Phone</label>
