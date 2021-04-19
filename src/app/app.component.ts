@@ -31,7 +31,7 @@ public getStudents(): void {
     }
   );
 }
-public onAddEmloyee(addForm: NgForm): void {
+public onAddStudent(addForm: NgForm): void {
   document.getElementById('add-student-form').click();
   this.studentService.addStudent(addForm.value).subscribe(
     (response: Student) => {
@@ -46,7 +46,7 @@ public onAddEmloyee(addForm: NgForm): void {
   );
 }
 
-public onUpdateEmloyee(student: Student): void {
+public onUpdateStudent(student: Student): void {
   this.studentService.updateStudent(student).subscribe(
     (response: Student) => {
       console.log(response);
@@ -58,7 +58,7 @@ public onUpdateEmloyee(student: Student): void {
   );
 }
 
-public onDeleteEmloyee(studentId: number): void {
+public onDeleteStudent(studentId: number): void {
   this.studentService.deleteStudent(studentId).subscribe(
     (response: void) => {
       console.log(response);
